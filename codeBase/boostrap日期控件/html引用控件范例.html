@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>订单查询</title>
+		<meta name="keywords" content="广州电信 腾讯">
+		<meta name="description" content="广州电信">
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"/>
+        <link href="css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="./bootstrap/css/bootstrap-datetimepicker.min.css">
+		<link href="css/libs_ce539.css" rel="stylesheet" type="text/css">
+		<link href="css/global_8ab8797627.css" rel="stylesheet" type="text/css">
+		<link href="css/page_b8c45d55f4.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/search.css"/>
+		<link rel="icon" href="img/imglogo.ico">
+
+	</head>
+	<body>
+        <iframe width="100%" height="60" style="overflow:scroll;border-width: 0;" src="head.html"  ></iframe>
+		<div class="wrap">
+
+			<div class="order_head global_head_title order_bg">
+				<span class="index-left"><a href="index.html"> 首页 </a></span>
+				<span class="order_bg head_sp"></span>
+				<span class="head_step"><a href="search.html"> 订单查询 </a></span>
+			</div>
+			<div class="order_step_wrap">
+
+                <div class="row">
+                    <div class="form-group">
+                        <label for="dtp_input1" class="col-md-2 control-label">开始时间：</label>
+                        <div class="input-group date form_datetime col-md-5" id="formDateTime1"  data-date-format="YYYY-MM-dd" data-link-field="dtp_input1">
+                            <input class="form-control" size="16" type="text" value="" readonly id="dateTime1">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                        </div>
+                        <input type="hidden" id="dtp_input1" value="" /><br/>
+                    </div>
+                    <div class="form-group">
+                        <label for="dtp_input2" class="col-md-2 control-label">结束时间：</label>
+                        <div class="input-group date form_datetime col-md-5" id="formDateTime2" data-date-format="YYYY-MM-dd" data-link-field="dtp_input2">
+                            <input class="form-control" size="16" type="text" value="" readonly id="dateTime2">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                        </div>
+                        <input type="hidden" id="dtp_input2" value="" /><br/>
+                    </div>
+                    <span class="jobNumber">客户单号：</span>
+                    <input type="text" type="text" id="orderNum" class="u-ipt" placeHolder="输入客户单号"/>
+                    <select id="status" class="status">
+                        <option value="">订单状态</option>
+                        <option value="草稿">待支付 </option>
+                        <option value="待配送">成功订购</option>
+                    </select>
+                    <button type="button" class="u-btn u-btn-c4" id="search" >查询</button>
+                    <button type="button" class="u-btn u-btn-c4" id="export" >导出</button>
+                </div>
+                <table id="mTable" class="m-table" style="width: 1250px;">
+                    <thead>
+                    <tr>
+                        <th class="cola">客户名称</th>
+                        <th class="cole">产品名称</th>
+                        <th class="colc">客户单号</th>
+                        <th class="colc">支付凭据</th>
+                        <th class="cola">揽装工号</th>
+                        <th class="colc">来源渠道</th>
+                        <th class="colc">下单时间</th>
+                    </tr>
+                    </thead>
+                    <tbody id="mtbody">
+                    <tr class="emptyData">
+                        <td colspan="7" rowspan="6">没有相关数据</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="m-page m-page-sr" id="mpage" data-currentpage="0">
+                </div>
+			</div>
+		</div>
+		<div class="bottom">广州大乘信息技术有限公司提供技术服务   电话:020-85291688</div>
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.base64.js"></script>
+        <script src="js/jquery.md5.js"></script>
+        <script src="js/core.js"></script>
+        <script type="text/javascript" src="js/public.js"></script>
+        <script type="text/javascript" src="js/visitControl.js"></script>
+        <script type="text/javascript" src="./bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+        <script type="text/javascript" src="js/search.js"></script>
+	</body>
+</html>

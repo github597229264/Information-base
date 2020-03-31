@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>cookie相关操作</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<script src="cookie_plugins.js"></script>
+
+<script type="text/javascript">
+
+window.onload=function(){
+	//保存cookie
+	Cookie.setCookieDay("testKey","这是用于测试的cookie",5);
+
+	//获取cookie
+	var cookName=Cookie.getCookieEmpty("testKey");
+	document.getElementById("oneSpan").innerText="保存cookie后，获取cookie的值 = "+cookName;
+	//删除cookie
+ 	Cookie.delCookie("testKey");
+
+	//获取cookie
+	var cookName2=Cookie.getCookieEmpty("testKey");
+	document.getElementById("twoSpan").innerText="删除cookie后，cookie的值昰:"+cookName2; 
+};
+
+</script>
+</head>
+<body>
+	<div>
+		<label>cookie操作相关测试:</label>
+		<p id="oneSpan"></p>
+		<p id="twoSpan"></p>
+	</div>
+</body>
+</html>
