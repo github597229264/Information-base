@@ -1,0 +1,34 @@
+1.dos常用操作
+ cd  打开文件夹     md 新建文件夹     dir 查看   cd.. 返回上一级
+
+
+2.npm root -g 查看全局安装的npm地址
+
+
+3.npm config set registry http://registry.npm.taobao.org  永久设置npm 指向淘宝镜像，代替cnpm 
+
+  npm install -g cnpm --registry=http://registry.npm.taobao.org  npm 映射淘宝镜像cnpm 
+
+4.-s 安装包信息将加入到dependencies(生产阶段的依赖)
+  -d 安装包信息将加入到devDependencies(开发阶段的依赖)同时会添加到dependencies
+ --save-dev安装包信息将只加入到devDependencies(开发阶段的依赖)不会添加到dependencies
+
+cnpm install --save-dev  插件名  -------只安装到devDependencies(开发环境中)
+cnpm uninstall 插件名  ----------卸载插件
+
+5. 全局安装vue-cli2           cnpm install -g vue-cli      cnpm uninstall -g vue-cli   卸载vue-cli2
+
+6.脚手架搭建vue
+vue init webpack project-name(项目名称不能出现大写字母)
+
+7.配置vue语法高亮
+https://github.com/vuejs/vue/syntax/hightlight (sublime编辑器 vue语法提示插件)
+
+8. mode:history 模式去除地址栏中的#，但地址栏没有更新页面不会重新请求，找不到页面会报404错误；
+    mode:hash 模式地址栏中有#，但地址栏没有更新页面不会重新请求；
+
+9.eslint做代码规范检查的插件
+
+10. 全局安装vue-cli3           cnpm install -g @vue/cli   
+
+11. 全局安装vue-cli3           cnpm create project-name

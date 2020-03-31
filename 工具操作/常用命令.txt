@@ -1,0 +1,51 @@
+
+cnpm代替那npm： npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+--------搭建VUE2.0---------
+
+1. 全局安装vue-cli：cnpm install -g vue-cli
+
+2. 创建项目：vue init webpack project-name（项目名）
+
+3. 安装依赖包：cnpm install
+
+4. 运行： cnpm run dev
+
+
+---------------git 常用操作命令----------------
+
+1.  git init   =初始化本地仓库
+
+2. git add remote [数据源] [远程 GitHub仓库]  =添加远程仓库源 如:git add remote origin https://github.com/Jeremyljm/python-test.git
+
+3. git clone -b [分支名] [远程GitHub仓库]  =克隆指定分支的远程仓库(-b [分支名]可省略，省略则表示默认克隆master分支)
+
+4. git pull    =拉取数据
+
+5. 添加变更文件
+5.1.  git add .  =添加所有变更文件
+5.2.  git add test01.py  test02.py      =添加 指定 文件
+5.3.  git add test*      =添加  文件名为 test 开头的文件
+5.4.  git add *.py     =添加 后缀为 .py 的文件
+
+6. git commit -m "更新备注"    =提交暂存区文件到本地仓库
+
+7. git push [数据源] [分支名]   =推送本地仓库到远程仓库  如:git push origin master 提交到master分支
+
+8. git checkout [分支名]   =切换分支; 如master
+
+9. git status   =查看文件状态
+
+10. git fetch [数据源] [分支名]      =更新差异到本地仓库（只更新本地仓库，不影响所有分支代码）
+
+11. git merge [数据源] [分支名]   =合并差异文件（将差异文件合并到指定分支）
+
+12. git diff [文件目录/文件名]  =查看本地与线上当前文件差异
+
+13. git branch -a  =查看当前分支
+
+14. git checkout -b [分支名]  =新建分支(b代表同时切换到dev分支下面去)
+
+15. 将dev分支代码整合到master分支：
+15.1.  git checkout master 切换到master分支
+15.2.  git merge dev  将dev分支整合到当前分支下即master分支
